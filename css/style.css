@@ -91,7 +91,7 @@ nav a {
 .image-with-text {
     position: relative;
     margin: 10px;
-    text-alig: center;
+    text-align: center;
     overflow: hidden; /* Add overflow to prevent text overlay from overflowing */
 }
 
