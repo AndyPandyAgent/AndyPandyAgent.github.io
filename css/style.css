@@ -18,6 +18,10 @@ header {
     padding: 20px 0;
 }
 
+.header-image{
+
+}
+
 nav {
     background: #444;
     text-align: center;
@@ -84,7 +88,7 @@ nav a {
 
     .image-row img {
         max-width: 500%;
-        margin: 0px 100px;
+        margin: 0px 120px;
         border-radius: 20px;
     }
 
