@@ -8,18 +8,18 @@
 body {
     font-family: Cambria, serif;
     line-height: 1.6;
-    background-color: #444;
+    background-color: #888a5a;
 }
 
 header {
-    background: #333;
-    color: white;
+    background: #888a5a;
+    color: #423912;
     text-align: center;
     padding: 20px 0;
 }
 
 nav {
-    background: #444;
+    background: #a1a36c;
     text-align: center;
 }
 
@@ -39,11 +39,11 @@ main2 {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background: #333;
+    background: #888a5a;
 }
 
 footer {
-    background: #333;
+    background: #757a3a;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -62,7 +62,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #423912;
     padding: 5px 10px;
     font-weight: bold;
 }
@@ -85,40 +85,43 @@ nav a {
 .center-text {
     margin: 10px;
     padding: 20px;
-    color: white;
+    color: #423912;
     font-size: 18px;
 }
 
 .center-subtext {
     margin: 10px;
     padding: 20px;
-    color: white;
+    color: #423912;
     font-size: 18px;
 }
 
-.right-image {
-
-    width: 100%;
-    height: 100%;
-
-}
-.right-image img {
-    width: 30%;
-    height: auto;
-    float: right;
-    margin-top: -270px;
+.right-image{
+    margin-top: 5%;
 }
 .right-text {
-    color: white;
+    color: #423912;
     padding: 20px;
     font-size: 18px;
-    left: 100px;
 }
-.left-text {
-    color: white;
+.left-text-header {
+    color: #423912;
     padding: 20px;
     font-size: 30px;
-    margin-right: 70%;
+    margin-left: -30%;
+    margin-right: 40%;
+}
+
+.left-text-subheader {
+    color: #423912;
+    padding: 20px;
+    font-size: 30px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.left-text{
+
 }
 
 .main-video{
@@ -128,6 +131,10 @@ nav a {
 .center-title {
     margin: 10px;
     padding: 20px;
-    color: white;
+    color: #423912;
     font-size: 30px;
+}
+
+.next-to {
+    display: flex;
 }
