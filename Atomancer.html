@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Website Layout</title>
     <link rel="stylesheet" href="css/styleGame1.css">
+
 </head>
 <body>
     <nav>
@@ -17,8 +18,22 @@
 
     <header>
         <h1>Andie Larsson</h1>
-        <div class="header-image">
-            <img src="Images/guts_pfp.jpg" />
+        <div class="side-by-side">
+            <div class="left-text-subheader">
+                Gameplay Designer <br />
+                Technical Designer <br />
+                Producer <br />
+            </div>
+            <div class="image-row">
+                <img src="Images/Me.png" />
+            </div>
+            <div class="left-text-subheader">
+                Technical Skills: <br />
+                C# <br />
+                C++ <br />
+                GMLCode <br />
+                Web Development
+            </div>
         </div>
     </header>
 
@@ -119,12 +134,253 @@
                 </sub>
             </div>
 
+
+
             <div class="right-image">
                 <video width="600" autoplay muted>
                     <source src="Atomancer/vid_1.mov" />
                 </video>
             </div>
         </div>
+
+        <button class="showTextButton" data-text-id="text1">SEE SOME SCRIPTS</button>
+        <div class="displayText" id="text1" style="display: none;">
+            <pre>
+            
+            AreaDamage Script
+
+            private void Start()
+                {
+                    //_renderer = areaObject.GetComponent<Renderer>();
+                    //originalColor = _renderer.material.color;
+                    InvokeRepeating("DamageTick", 0.0f, timeBetweenAttacks);
+                    areaObject.transform.localScale = new Vector3(1, 1, 1) * radius/3;
+                    startRotation = areaObject.transform.rotation; 
+                }
+                private void Update()
+                {
+                    areaObject.transform.rotation = startRotation;
+                }
+
+                /*private void Update()
+                {
+                    // Constantly change color
+                    timer += Time.deltaTime;
+                    float lerpValue = (Mathf.Sin(timer / timeBetweenAttacks * Mathf.PI * 2) + 1) / 2; // Oscillates between 0 and 1
+                    _renderer.material.color = Color.Lerp(originalColor, flashColor, lerpValue);
+
+                    areaObject.transform.localScale = new Vector3(radius * 2, areaObject.transform.localScale.y, radius * 2);
+                }*/
+
+                private void DamageTick()
+                {
+                    Collider[] enemiesInRange = Physics.OverlapSphere(transform.position, radius, enemyMask);
+                    foreach (Collider enemyCollider in enemiesInRange)
+                    {
+                        S_EnemyHealthController emc = enemyCollider.GetComponent<S_EnemyHealthController>
+    ();
+    if (emc != null)
+    {
+    emc.TakeDamage(damage);
+    }
+    }
+    _____________________________________________________________________________________________________________________
+
+            DamgeTrail Script
+
+            private void Start()
+            {
+            isOnPlayer = gameObject.transform.root.tag == "Player";
+            maxTrailLength = Mathf.FloorToInt(trailLengthTime / spawnInterval);
+            trailBulletQueue = new Queue<GameObject>
+                ();
+                trailRenderer = GetComponent<TrailRenderer>
+                    ();
+                    trailWdith = trailRenderer.startWidth;
+
+                    trailRenderer.time = trailLengthTime;
+                    }
+
+                    private void Update()
+                    {
+                    if (!isOnPlayer)
+                    {
+                    transform.localPosition = new Vector3(0f, 0f, 3 + math.sin(Time.time * 3) * 3f);
+                    }
+
+                    spawnTimer += Time.deltaTime;
+                    damageTimer += Time.deltaTime;
+                    if (spawnTimer >= spawnInterval)
+                    {
+                    SpawntrailBullet();
+                    spawnTimer = 0;
+                    }
+
+                    if (damageTimer >= damageTickInterval)
+                    {
+                    DamageEnemies();
+                    damageTimer = 0;
+                    }
+                    }
+
+                    private void SpawntrailBullet()
+                    {
+                    Vector3 spawnPosition = transform.position;
+                    GameObject newtrailBullet;
+                    if (trailBulletQueue.Count < maxTrailLength)
+                    {
+                    newtrailBullet = Instantiate(trailColliderPrefab, spawnPosition, Quaternion.identity);
+                    newtrailBullet.transform.localScale = Vector3.one * trailWdith;
+                    }
+                    else
+                    {
+                    newtrailBullet = trailBulletQueue.Dequeue();
+                    newtrailBullet.transform.position = spawnPosition;
+                    }
+
+                    trailBulletQueue.Enqueue(newtrailBullet);
+                    }
+
+                    private void DamageEnemies()
+                    {
+                    StartCoroutine(FlashTrail());
+                    foreach (GameObject trailBullet in trailBulletQueue)
+                    {
+                    Collider[] overlappingColliders = Physics.OverlapSphere(trailBullet.transform.position, trailWdith / 2);
+                    foreach (Collider col in overlappingColliders)
+                    {
+                    S_EnemyHealthController enemy = col.gameObject.GetComponent<S_EnemyHealthController>
+                    ();
+                    if (enemy != null)
+                    {
+                    enemy.TakeDamage(damageAmount);
+                    }
+                    }
+                    }
+                    }
+
+
+                    private IEnumerator FlashTrail()
+                    {
+                    Color originalColor = trailRenderer.startColor;
+                    trailRenderer.startColor = flashColor;
+                    trailRenderer.endColor = flashColor;
+
+                    yield return new WaitForSeconds(flashDuration);
+
+                    trailRenderer.endColor = originalColor;
+                    trailRenderer.startColor = originalColor;
+                    }
+    _______________________________________________________________________________________________________________
+
+                        KillRadomOnScreenScript
+
+                        private void Awake()
+                        {
+                        CreateBoltPool(initialBoltPoolSize);
+                        }
+
+                        private void OnEnable()
+                        {
+                        Kill();
+                        elapsedTime = 0;
+                        }
+
+                        private void OnDisable()
+                        {
+                        foreach (GameObject bolt in boltPool)
+                        {
+                        if (bolt != null)
+                        bolt.SetActive(false);
+                        }
+                        }
+                        void Update()
+                        {
+                        elapsedTime += Time.deltaTime;
+
+                        if (elapsedTime >= timeBetweenKills)
+                        {
+                        elapsedTime = 0f;
+                        Kill();
+                        }
+                        }
+
+                        private void CreateBoltPool(int size)
+                        {
+                        for (int i = 0; i < size; i++)
+                        {
+                        GameObject bolt = Instantiate(boltPrefab);
+                        bolt.SetActive(false);
+                        boltPool.Add(bolt);
+                        }
+                        }
+
+                        private GameObject GetBoltFromPool()
+                        {
+                        foreach (GameObject bolt in boltPool)
+                        {
+                        if (!bolt.activeInHierarchy)
+                        {
+                        return bolt;
+                        }
+                        }
+
+                        GameObject newBolt = Instantiate(boltPrefab);
+                        boltPool.Add(newBolt);
+                        return newBolt;
+                        }
+
+                        private void Kill()
+                        {
+                        killableEnemies.Clear();
+                        foreach (Collider enemy in Physics.OverlapSphere(transform.position, killRange, enemyLayer))
+                        {
+                        // Debug.Log(enemy.name);
+                        killableEnemies.Add(enemy.gameObject);
+                        }
+
+                        if (killableEnemies.Count <= 0)
+                        return;
+                        for (int i = 0; i < numKills; i++)
+                        {
+                        KillRandomEnemy();
+                        }
+                        AudioManager.Instance.PlaySound3D("Cern-TainDeath", transform.position);
+                        }
+
+                        private void KillRandomEnemy()
+                        {
+                        GameObject tempEnemy = killableEnemies[Random.Range(0, killableEnemies.Count)];
+                        S_EnemyHealthController tempHealthController = tempEnemy.GetComponent<S_EnemyHealthController>
+                            ();
+                            tempHealthController.TakeDamage(damage);
+                            CreateBolt(tempEnemy.transform);
+                            }
+
+                            private void CreateBolt(Transform enemyTransform)
+                            {
+                            GameObject bolt = GetBoltFromPool();
+                            bolt.transform.position = enemyTransform.position;
+                            bolt.transform.rotation = Quaternion.identity;
+                            bolt.SetActive(true);
+                            StartCoroutine(DisableBoltAfterTime(bolt, boltLifetime));
+                            }
+
+                            private IEnumerator DisableBoltAfterTime(GameObject bolt, float time)
+                            {
+                            yield return new WaitForSeconds(time);
+                            bolt.SetActive(false);
+                            }
+
+
+
+
+</pre>
+
+        </div>
+        <script src="javascript.js"></script>
+
+
 
     </main2>
 
