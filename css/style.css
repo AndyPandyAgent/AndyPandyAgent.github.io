@@ -87,6 +87,7 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: visible;
 }
 
     .image-row img {
@@ -96,10 +97,10 @@ nav a {
     }
 
 .image-with-text {
+    overflow: visible;
     position: relative;
     margin: 10px;
     text-align: center;
-    overflow: hidden; /* Add overflow to prevent text overlay from overflowing */
 }
 
     .image-with-text img {
