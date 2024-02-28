@@ -138,3 +138,17 @@ nav a {
 .next-to {
     display: flex;
 }
+
+button {
+    background: #a1a36c;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.displayText {
+    border: 10px solid;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #423912;
+}
