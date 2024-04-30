@@ -80,7 +80,8 @@ nav a {
     width: 50%;
     margin: 0 auto;
     text-align: center;
-    padding-top: 120px;
+    
+    color: #423912;
 }
 
 .image-row {
@@ -159,4 +160,21 @@ nav a {
     margin-right: 0;
 }
 
+.about-me-text {
+    color: #423912;
+    padding: 20px;
+    font-size: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+}
+
+.card-content {
+    align-content: center;
+    border: 20px solid #423912;
+    border-radius: 20px;
+    border-style: solid;
+    display: block;
+    background: #dae6db;
+}
 
