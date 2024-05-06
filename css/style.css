@@ -8,12 +8,12 @@
 body {
     font-family: Cambria, serif;
     line-height: 1.6;
-    background-color: #888a5a;
+    background-color: #26484A;
 }
 
 header {
-    background: #888a5a;
-    color: #423912;
+    background: #26484A;
+    color: #dae6db;
     text-align: center;
     padding: 20px 0;
     padding: 20px;
@@ -25,7 +25,7 @@ header {
 
 
 nav {
-    background: #a1a36c;
+    background: #0C2C2E;
     text-align: center;
 }
 
@@ -58,7 +58,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #423912;
+    color: #dae6db;
     padding: 5px 10px;
     font-weight: bold;
 }
@@ -80,8 +80,7 @@ nav a {
     width: 50%;
     margin: 0 auto;
     text-align: center;
-    
-    color: #423912;
+    color: #E2D1C5;
 }
 
 .image-row {
@@ -127,7 +126,7 @@ nav a {
     transform: translate(-50%, -50%);
     opacity: 1;
     text-align: center;
-    color: #fff;
+    color: #dae6db;
     z-index: 2;
     transition: opacity 0.3s;
     padding: 10px;
@@ -158,7 +157,7 @@ nav a {
 }
 
 .left-text-subheader {
-    color: #423912;
+    color: #dae6db;
     padding: 20px;
     font-size: 30px;
     margin-left: 0;
@@ -166,7 +165,6 @@ nav a {
 }
 
 .about-me-text {
-    color: #423912;
     padding: 20px;
     font-size: 25px;
     margin-left: 0;
@@ -179,7 +177,9 @@ nav a {
     border: 20px solid #423912;
     border-radius: 20px;
     border-style: solid;
+    border-color: #0C2C2E;
     display: block;
     background: #dae6db;
+    color: #0C2C2E;
 }
 

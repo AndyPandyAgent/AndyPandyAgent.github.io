@@ -8,12 +8,12 @@
 body {
     font-family: Cambria, serif;
     line-height: 1.6;
-    background-color: #888a5a;
+    background-color: #26484A;
 }
 
 header {
-    background: #888a5a;
-    color: #423912;
+    background: #26484A;
+    color: #dae6db;
     text-align: center;
     padding: 20px 0;
     padding: 20px;
@@ -24,9 +24,8 @@ header {
 }
 
 nav {
-    background: #a1a36c;
+    background: #0C2C2E;
     text-align: center;
-
 }
 
 main {
@@ -45,7 +44,7 @@ main2 {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background: #888a5a;
+    background: #26484A;
 }
 
 footer {
@@ -68,7 +67,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #423912;
+    color: #dae6db;
     padding: 5px 10px;
     font-weight: bold;
 }
@@ -88,14 +87,14 @@ nav a {
 .center-text {
     margin: 10px;
     padding: 20px;
-    color: #423912;
+    color: #dae6db;
     font-size: 18px;
 }
 
 .center-subtext {
     margin: 10px;
     padding: 20px;
-    color: #423912;
+    color: #dae6db;
     font-size: 18px;
 }
 
@@ -103,12 +102,12 @@ nav a {
     margin-top: 5%;
 }
 .right-text {
-    color: #423912;
+    color: #dae6db;
     padding: 20px;
     font-size: 18px;
 }
 .left-text-header {
-    color: #423912;
+    color: #dae6db;
     padding: 20px;
     font-size: 30px;
     margin-left: -30%;
@@ -116,7 +115,7 @@ nav a {
 }
 
 .left-text-subheader {
-    color: #423912;
+    color: #dae6db;
     padding: 20px;
     font-size: 20px;
     margin-left: 0;
@@ -134,7 +133,7 @@ nav a {
 .center-title {
     margin: 10px;
     padding: 25px;
-    color: #423912;
+    color: #dae6db;
     font-size: 20px;
 }
 
@@ -152,10 +151,11 @@ nav a {
 }
 
 button {
-    background: #a1a36c;
+    background: #0C2C2E;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    color: #dae6db;
 }
 
 .displayText {
@@ -163,7 +163,7 @@ button {
     border-radius: 20px;
     margin-top: 20px;
     font-size: 18px;
-    color: #423912;
+    color: #0C2C2E;
     background: #dae6db;
 }
 
@@ -184,6 +184,7 @@ button {
     border: 20px solid #423912;
     border-radius: 20px;
     border-style: solid;
+    border-color: #0C2C2E; 
     display: block;
     background: #dae6db;
 }
