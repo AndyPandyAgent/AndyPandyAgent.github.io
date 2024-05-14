@@ -85,21 +85,22 @@ nav a {
 
 .image-row {
     display: flex;
-    justify-content: center;
     align-items: center;
     overflow: visible;
+    justify-content: center; /* Center horizontally */
+
 }
 
     .image-row img {
         max-width: 500%;
-        margin: 0px 120px;
+
         border-radius: 20px;
     }
 
 .image-with-text {
     overflow: visible;
     position: relative;
-    margin: 10px;
+    align-items: center;
     text-align: center;
 }
 
@@ -121,13 +122,12 @@ nav a {
 .text-overlay {
     font-size: 20px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 30%; /* Adjust horizontal positioning */
+    transform: translate(-50%, -50%); /* Center the overlay */
     opacity: 1;
     text-align: center;
     color: #dae6db;
-    z-index: 2;
     transition: opacity 0.3s;
     padding: 10px;
     border: thick;
