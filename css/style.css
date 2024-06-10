@@ -153,13 +153,13 @@ nav a {
     justify-content: space-between;
 }
 .side-by-side > * {
-     margin: 0 100px;
+     margin: 0 20px;
 }
 
 .left-text-subheader {
     color: #dae6db;
     padding: 20px;
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 0;
     margin-right: 0;
 }
