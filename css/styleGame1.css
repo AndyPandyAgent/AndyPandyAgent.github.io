@@ -122,6 +122,15 @@ nav a {
     margin-right: 0;
 }
 
+.card-content-text {
+    color: #0C2C2E;
+    padding: 20px;
+    font-size: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+}
+
 .left-text{
 
 }
@@ -187,4 +196,5 @@ button {
     border-color: #0C2C2E; 
     display: block;
     background: #dae6db;
+    padding: 2%;
 }

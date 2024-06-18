@@ -16,12 +16,12 @@
 
 
     <main>
-        <div class="next-to">
+        <div class="next-to" style="padding-left: 10%">
             <div class="left-text-header">
-                <h1>Fruity Wars</h1>
+                <img src="FruityWars/Art_UI_Logo.png" width="500"/>
                 <div class="main-video">
-                    <video with="320" height="240" autoplay muted loop>
-                        <source src="Atomancer/Atomancer_Vid.mov" />
+                    <video with="460" height="360" autoplay muted loop>
+                        <source src="FruityWars/CutsceneWMusic.mp4" />
                     </video>
                     <div class="center-text">
                         <h1>Concept</h1>
@@ -43,13 +43,12 @@
                 Plattform: 		PC<br />
                 Genre:		    RTS/Platformer<br />
                 Engine:		    Unreal Engine 5 <br />
-                Development time: 10 weeks <br />
+                Development time: 7 weeks <br />
                 Restrictions:	 <br /> Theme: <br />
                 "Dangerous to be alone"<br />
-                Age group: 9-12
                 <br /><br /><br /><br />
                 <h1>Roles and <br /> Responsibilities</h1><br />
-                <b>Gameplay/Technical Design / Programming</b> <br />
+                <b>Gameplay/Technical Design</b> <br />
                 Rapid Prototyping, script optimizing and ideating features that <br />
                 will improve the player experience.<br /><br />
             </div>
@@ -67,9 +66,12 @@
                 My role as a technical designer consisted of prototyping and blueprint implementation. <br />
             </i>
         </div>
+        <br />
+        <div class="center-title">
+            <h2>Prototyping</h2>
+        </div>
 
-
-        <div class="side-by-side" style="padding-right : 100px">
+        <div class="side-by-side">
 
             <div class="card-content">
                 <div class="left-text-subheader" style="text-align: center; color: #0C2C2E">
@@ -88,16 +90,15 @@
 
             <div class="card-content">
                 <div class="left-text-subheader" style="text-align: center; color: #0C2C2E">
-                    <h3>Controll testing</h3>
+                    <h3>Control testing</h3>
                 </div>
                 <div class="image-row">
                     <img src="FruityWars/GP3Gif3.gif" width="600" height="300" />
                 </div>
                 <div class="left-text-subheader" style="text-align: center; color: #0C2C2E">
                     <sub>
-                        I scripted 6 different controlls to test which <br />
+                        I scripted <b>6 different controls</b> to test which <br />
                         one felt best before we told the programmers. <br />
-                        This only took me one day which meant it never became a blocker
                     </sub>
                 </div>
 
@@ -107,30 +108,63 @@
 
         <br />
 
-        <div class="card-content">
-            <div class="left-text-subheader" style="text-align: center; color: #0C2C2E">
-                <h3>Moving Platform</h3>
-                <div class="image-row">
-                    <img src="FruityWars/GP3Gif7.gif" width="600" height="300" />
+        <div class="center-title">
+            <h2>Mechanics</h2>
+        </div>
+
+        <div class="side-by-side">
+            <div class="card-content">
+                <div class="left-text-subheader" style="text-align: center; color: #0C2C2E">
+                    <h3>Moving Platform</h3>
+                    <div class="image-row">
+                        <img src="FruityWars/GP3Gif7.gif" width="600" height="300" style="margin: 0px" />
+                    </div>
+
                 </div>
 
+                <div class="card-content-text">
+                    <sub>
+                        My level designer wanted a moving platform <br />
+                        so I made one for him. It is capabale of <b>infinte points</b> <br />
+                        and it has both <b>ping pong</b> mode and <b>full circle.</b> <br />
+                        It also <b>slowes down</b> and <b>stops</b> when it reaches the end and start.
+                    </sub>
+                </div>
+                <button class="showTextButton" data-text-id="text1">SEE BLUEPRINT</button>
+
             </div>
 
-            <div class="left-text-subheader" style="text-align: center; color: #0C2C2E">
-                <sub>
-                    My level designer wanted a moving platform <br />
-                    so I made one for him. It is capabale of infinte points <br />
-                    and it has both ping pong mode and full circle. <br />
-                    It also slowes down when it reaches the end and start.
-                </sub>
-            </div>
-            <button class="showTextButton" data-text-id="text1">SEE BLUEPRINT</button>
+            <div class="card-content">
+                <div class="card-content-text">
+                    <h3>Disappearing Platform</h3>
+                    <div class="image-row">
+                        <img src="FruityWars/GP3GifFallingPlatform.gif" width="600" height="300" style="margin: 0px" />
+                    </div>
+                </div>
+                <div class="card-content-text">
+                    <sub>
+                        We needed a way to <b>get the player into combat.</b> <br />
+                        I prototyped a disappearing platform. <br />
+                        We liked the feature so I added more features to it <br />
+                        and implemeted it into the game
+                    </sub>
+                </div>
+                <button class="showTextButton" data-text-id="text2">SEE BLUEPRINT</button>
 
+            </div>
         </div>
+
+
 
         <div id="text1" style="display: none;">
             <pre>
-            <iframe width="1000" height="600" src="https://blueprintue.com/render/tp-opxa6/" scrolling="no" allowfullscreen></iframe>            </pre>
+            <iframe width="1000" height="600" src="https://blueprintue.com/render/aw5zqper/" scrolling="no" allowfullscreen></iframe>            </pre>
+
+        </div>
+
+        <div id="text2" style="display: none;">
+            <pre>
+            <iframe width="1000" height="600" src="https://blueprintue.com/render/ygih6oe4/" scrolling="no" allowfullscreen></iframe>            </pre>
 
         </div>
 
@@ -142,6 +176,75 @@
                 I was given controll over the 3Cs and the programming behind it <br />
             </i>
         </div>
+
+        <div class="side-by-side">
+            <div class="card-content">
+
+                <div class="card-content-text" style="color: #0C2C2E">
+                    <h2>Jump</h2>
+                </div>
+
+                <div class="image-row">
+                    <img src="FruityWars/GP3GifMovement.gif" width="600" height="300" />
+                </div>
+
+                <br /><br />
+
+                <div class="card-content-text">
+                    <sub>
+                        I scripted and maintained a <b>coyote jump</b> to make jump timming more forgiving.
+                        A  <b>buffer jump</b> to make quick jump easier and <b>sticky feet</b> to make landing smoother.
+                    </sub>
+                </div>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <div class="card-content-text" style="color: #0C2C2E;">
+                    <h2>Camera</h2>
+                </div>
+
+                <div class="image-row">
+                    <img src="FruityWars/GP3GifCamera.gif" width="500" height="250" />
+                </div>
+
+                <br /><br />
+
+                <div class="card-content-text">
+                    <sub>
+                        I scripted a <b>slow-motion</b> feature, tweeked the camera <b>zoom-out</b>
+                        and worked on camera <b>speed/fluidity.</b>
+                    </sub>
+                </div>
+
+            </div>
+        </div>
+
+        <br />
+
+        <div class="card-content" style="padding: 0%">
+
+            <div class="card-content-text" style="color: #0C2C2E">
+                <h2>Dodge</h2>
+            </div>
+
+            <div class="image-row">
+                <img src="FruityWars/GP3GifDash.gif" width="500" height="250" />
+            </div>
+
+            <br /><br />
+
+            <div class="card-content-text">
+                <sub>
+                    I scripted, balanced and maintained a dash mechanic.
+                </sub>
+            </div>
+
+        </div>
+
+
 
 
         <script src="javascript.js"></script>
