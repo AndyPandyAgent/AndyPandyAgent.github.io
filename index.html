@@ -13,6 +13,7 @@
             <li><a href="about.html">About Me</a></li>
         </ul>
     </nav>
+
     <header>
         <div class="side-by-side">
             <h1>Andie Larsson</h1>
@@ -55,9 +56,6 @@
                         With my fast <b>prototyping</b> I can test things quickly. Fail fast! <br />
                         I love making <b>collaborative designs</b> come to life! <br />
                         I strive with <b>technical problem solving</b> and <b>iterative workflows.</b>
-
-
-
                     </div>
                 </div>
             </div>
@@ -67,7 +65,7 @@
 
         <div class="card-content">
             <div class="side-by-side" style="padding-bottom: 10px; padding-top: 10px">
-                <img src="Images/unity_logo.png" width="80" >
+                <img src="Images/unity_logo.png" width="80">
                 <img src="Images/unreal_logo.png" width="80">
                 <img src="Images/gamemaker.png" width="80">
                 <img src="Images/C++.png" width="80">
@@ -77,45 +75,50 @@
             </div>
         </div>
 
-            <br />
+        <br />
     </header>
 
+    <br />
+
+    <!-- SVG Background Animation -->
+    <div style="position: absolute; width:100%; overflow: hidden;">
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+            <style>
+                .path-0 {
+                    animation: pathAnim-0 4s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+
+                @keyframes pathAnim-0 {
+                    0% {
+                        d: path("M 0,400 L 0,0 C 99.3397129186603,99.99043062200955 198.6794258373206,199.9808612440191 306,212 C 413.3205741626794,224.0191387559809 528.6220095693781,148.06698564593302 618,129 C 707.3779904306219,109.93301435406697 770.8325358851675,147.7511961722488 846,174 C 921.1674641148325,200.2488038277512 1008.0478468899521,214.92822966507177 1109,184 C 1209.952153110048,153.07177033492823 1324.976076555024,76.53588516746412 1440,0 L 1440,400 L 0,400 Z");
+                    }
+
+                    25% {
+                        d: path("M 0,400 L 0,0 C 109.04306220095694,55.320574162679435 218.08612440191388,110.64114832535887 309,148 C 399.9138755980861,185.35885167464113 472.6985645933015,204.755980861244 561,194 C 649.3014354066985,183.244019138756 753.1196172248804,142.33492822966508 865,145 C 976.8803827751196,147.66507177033492 1096.8229665071772,193.9043062200957 1194,177 C 1291.1770334928228,160.0956937799043 1365.5885167464114,80.04784688995215 1440,0 L 1440,400 L 0,400 Z");
+                    }
+
+                    50% {
+                        d: path("M 0,400 L 0,0 C 118.3732057416268,96.37320574162679 236.7464114832536,192.74641148325358 337,216 C 437.2535885167464,239.25358851674642 519.3875598086124,189.38755980861242 588,153 C 656.6124401913876,116.61244019138758 711.7033492822966,93.70334928229667 811,100 C 910.2966507177034,106.29665071770333 1053.799043062201,141.79904306220095 1166,130 C 1278.200956937799,118.20095693779905 1359.1004784688994,59.100478468899524 1440,0 L 1440,400 L 0,400 Z");
+                    }
+
+                    75% {
+                        d: path("M 0,400 L 0,0 C 67.12918660287079,90.78468899521532 134.25837320574158,181.56937799043064 240,192 C 345.7416267942584,202.43062200956936 490.0956937799044,132.50717703349284 588,124 C 685.9043062200956,115.49282296650718 737.3588516746411,168.4019138755981 816,181 C 894.6411483253589,193.5980861244019 1000.4688995215313,165.88516746411483 1109,129 C 1217.5311004784687,92.11483253588517 1328.7655502392345,46.057416267942585 1440,0 L 1440,400 L 0,400 Z");
+                    }
+
+                    100% {
+                        d: path("M 0,400 L 0,0 C 99.3397129186603,99.99043062200955 198.6794258373206,199.9808612440191 306,212 C 413.3205741626794,224.0191387559809 528.6220095693781,148.06698564593302 618,129 C 707.3779904306219,109.93301435406697 770.8325358851675,147.7511961722488 846,174 C 921.1674641148325,200.2488038277512 1008.0478468899521,214.92822966507177 1109,184 C 1209.952153110048,153.07177033492823 1324.976076555024,76.53588516746412 1440,0 L 1440,400 L 0,400 Z");
+                    }
+                }
+            </style>
+            <path d="M 0,400 L 0,0 C 99.3397129186603,99.99043062200955 198.6794258373206,199.9808612440191 306,212 C 413.3205741626794,224.0191387559809 528.6220095693781,148.06698564593302 618,129 C 707.3779904306219,109.93301435406697 770.8325358851675,147.7511961722488 846,174 C 921.1674641148325,200.2488038277512 1008.0478468899521,214.92822966507177 1109,184 C 1209.952153110048,153.07177033492823 1324.976076555024,76.53588516746412 1440,0 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#0c2c2e" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+        </svg>
+    </div>
 
     <main>
 
-        <div class="image-row" style="padding-left: 10%">
-            <div class="image-with-text">
-                <a href="Game1.html" />
-
-                <img src="Images/HuntingWithDad_Image.png" width="500">
-                <div class="image-row" style="padding-right: 45%">
-                    <img src="Images/steam-logo-transparent.png" width="100">
-                    <img src="Images/unity_logo.png" width="100">
-                </div>
-                
-                <div class="text-overlay">
-                    <h4>Solo Project <br /> <br /> Steam Release</h4>
-                </div>
-                </a>
-            </div>
-            <div class="image-with-text" style="align-items: center">
-                <a href="Atomancer.html">
-                    <img src="Images/Atomancer_Image.png" width="500">
-                    <div class="image-row" style="padding-right: 40%">
-                        <img src="Images/FGA.png" width="200">
-                        <img src="Images/unity_logo.png" width="100">
-                    </div>
-                    <div class="text-overlay">
-                        <h4>
-                            Gameplay Design <br /> Technical Design  <br /> Gameplay Programmer <br />  <br />                  Nominated: <br />
-                            Best Design <br />
-                            Best Tech <br />
-                            Judges Choice
-                        </h4>
-                    </div>
-                </a>
-
-            </div>
+        <div class="image-row" style="padding-left: 10%; top: 60%; position: absolute">
             <div class="image-row">
                 <div class="image-with-text">
                     <a href="FruityWars.html" />
@@ -135,13 +138,26 @@
                     </a>
                 </div>
             </div>
+            <div class="image-with-text" style="align-items: center">
+                <a href="Atomancer.html">
+                    <img src="Images/Atomancer_Image.png" width="500">
+                    <div class="image-row" style="padding-right: 40%">
+                        <img src="Images/FGA.png" width="200">
+                        <img src="Images/unity_logo.png" width="100">
+                    </div>
+                    <div class="text-overlay">
+                        <h4>
+                            Gameplay Design <br /> Technical Design  <br /> Gameplay Programmer <br />  <br />                  Nominated: <br />
+                            Best Design <br />
+                            Best Tech <br />
+                            Judges Choice
+                        </h4>
+                    </div>
+                </a>
+
+            </div>
 
         </div>
-
-
-
     </main>
-
-
 </body>
 </html>

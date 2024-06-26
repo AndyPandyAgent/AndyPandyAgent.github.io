@@ -128,7 +128,8 @@ nav a {
     font-size: 20px;
     margin-left: 0;
     margin-right: 0;
-    text-align: center;
+    text-align: left;
+    white-space: nowrap;
 }
 
 .left-text{
@@ -156,8 +157,15 @@ nav a {
     justify-content: space-between;
 }
 .side-by-side > *{
-    margin: 0 100px;
+
 }
+
+.side-by-side-text {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 button {
     background: #0C2C2E;
@@ -184,17 +192,22 @@ button {
 
     .image-row img {
         max-width: 500%;
-        margin: 0px 120px;
         border-radius: 20px;
     }
 
 .card-content {
     align-content: center;
-    border: 20px solid #423912;
+    border: 8px solid #423912;
     border-radius: 20px;
     border-style: solid;
     border-color: #0C2C2E; 
     display: block;
     background: #dae6db;
     padding: 2%;
+    width: 70%;
+}
+
+
+.image-display img {
+    border-radius: 100px;
 }
