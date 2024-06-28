@@ -63,6 +63,7 @@ nav ul {
 
 nav li {
     display: inline;
+    position: relative; /* Add this to handle the dropdown positioning */
 }
 
 nav a {
@@ -70,11 +71,42 @@ nav a {
     color: #dae6db;
     padding: 5px 10px;
     font-weight: bold;
+    font-size: 19px;
 }
 
     nav a:hover {
         background-color: #555;
     }
+
+/* Dropdown content (hidden by default) */
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0C2C2E;
+    min-width: 160px;
+    z-index: 1;
+}
+
+    nav .dropdown-content li {
+        display: block;
+    }
+
+    nav .dropdown-content a {
+        color: #dae6db;
+        padding: 5px 10px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+        nav .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+/* Show the dropdown menu on hover */
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
 
 .main-image {
     border-width: 10px;
@@ -211,3 +243,4 @@ button {
 .image-display img {
     border-radius: 100px;
 }
+
