@@ -224,3 +224,225 @@ nav .dropdown:hover .dropdown-content {
 
 }
 
+@media (max-width: 1000px) {
+
+    body {
+    font-family: Cambria, serif;
+    line-height: 1.6;
+    background-color: #26484A;
+    }
+
+    header {
+    background: #26484A;
+    color: #dae6db;
+    text-align: center;
+    padding: 20px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    }   
+
+
+    nav {
+    background: #0C2C2E;
+    text-align: center;
+    }
+
+    main {
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    }
+
+    footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    }
+
+    nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    }
+
+    nav li {
+    display: inline;
+    position: relative; /* Add this to handle the dropdown positioning */
+    }
+
+    nav a {
+    text-decoration: none;
+    color: #dae6db;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 19px;
+    }
+
+    nav a:hover {
+        background-color: #555;
+    }
+
+/* Dropdown content (hidden by default) */
+    nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0C2C2E;
+    min-width: 160px;
+    z-index: 1;
+    }
+
+    nav .dropdown-content li {
+        display: block;
+    }
+
+    nav .dropdown-content a {
+        color: #dae6db;
+        padding: 5px 10px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+        nav .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+/* Show the dropdown menu on hover */
+    nav .dropdown:hover .dropdown-content {
+    display: block;
+    }
+
+    .main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 10px;
+    }
+
+
+    .center-text {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    color: #E2D1C5;
+    }
+
+    .image-row {
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    justify-content: center; /* Center horizontally */
+
+    }
+
+    .image-row img {
+        max-width: 500%;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #0C2C2E;
+        border-radius: 5px;
+    }
+
+    .image-with-text {
+    overflow: visible;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    }
+
+    .image-with-text img {
+        max-width: 60%;
+        display: block;
+        margin-bottom: 10px;
+        transition: transform 0.2s;
+
+    }
+
+    .image-with-text:hover img{
+        transform: scale(1.1); /* Apply zoom effect to image on hover */
+    }
+    .image-with-text:hover {
+        transform: scale(1.01);
+    }
+
+    .text-overlay {
+    font-size: 20px;
+    position: absolute;
+    top: 40%;
+    left: 30%; /* Adjust horizontal positioning */
+    transform: translate(-50%, -50%); /* Center the overlay */
+    opacity: 1;
+    text-align: center;
+    color: #dae6db;
+    transition: opacity 0.3s;
+    padding: 10px;
+    border: thick;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    }
+
+/* Show text overlay when hovering over .image-with-text */
+    .image-with-text:hover .text-overlay {
+        opacity: 1; /* Show text overlay on image hover */
+    }
+
+    .game-type {
+        font-size: 30px;
+    }
+    .next-to {
+        display: flex;
+    }
+
+    .side-by-side {
+        /*align-items: center;
+        display: flex;
+        justify-content: space-between;*/
+    }
+    .side-by-side > * {
+    }
+
+    .left-text-subheader {
+        color: #dae6db;
+        padding: 20px;
+        font-size: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .about-me-text {
+        padding: 20px;
+        font-size: 25px;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+    }
+
+    .card-content {
+        align-content: center;
+        border: 8px solid #423912;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #0C2C2E;
+        display: block;
+        background: #dae6db;
+        color: #0C2C2E;
+    }
+
+    .about-me-icon {
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #0C2C2E;
+        margin: 0 10px;
+
+    }
+
+}

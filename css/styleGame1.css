@@ -244,3 +244,101 @@ button {
     border-radius: 100px;
 }
 
+
+
+@media (min-width: 768px) {
+    header {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    nav .dropdown-content {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the dropdown under its parent */
+    background-color: #0C2C2E;
+    min-width: 160px;
+    z-index: 1;
+    text-align: center;
+}
+
+    nav .dropdown-content li {
+        display: block;
+    }
+
+    /* Display dropdown content on hover */
+    nav .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Ensure that the dropdown stays centered */
+    nav .dropdown {
+        position: relative;
+    }
+
+    /* General styles for the dropdown items */
+    nav .dropdown-content a {
+        color: #dae6db;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+    nav .dropdown-content a:hover {
+        background-color: #555;
+    }
+    .side-by-side {
+        flex-direction: column;
+    }
+    .next-to {
+    flex-direction: column;
+    padding-left: 0;
+    align-items: center;
+    }
+
+    .main-image {
+        margin-top: 0;
+        height: auto;
+    }
+
+    .left-text-header {
+        font-size: 22px;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .card-content {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .image-row {
+        flex-direction: column;
+    }
+
+    .image-row img {
+        max-width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .right-text, .center-text, .center-subtext {
+        font-size: 16px;
+        text-align: center;
+    }
+}
