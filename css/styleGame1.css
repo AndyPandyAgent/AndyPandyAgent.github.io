@@ -326,13 +326,9 @@ button {
     .card-content-text {
         color: #0C2C2E;
         padding: 20px;
-        font-size: 20px;
+        font-size: 15px;
         margin-left: 0;
         margin-right: 0;
-        text-align: left;
-        flex: 1;
-        box-sizing: border-box;
-        flex-wrap: wrap;
     }
 
     .image-row {
