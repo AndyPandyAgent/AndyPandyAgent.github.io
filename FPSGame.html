@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Layout</title>
+    <link rel="stylesheet" href="css/styleGame1.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Projects</a>
+                <ul class="dropdown-content">
+                    <li><a href="FruityWars.html">Reberryon</a></li>
+                    <li><a href="Atomancer.html">Atomancer</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About Me</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <div class="next-to" style="padding-left: 10%">
+            <div class="left-text-header">
+                <h2>FPS Game</h2>
+                <div class="main-video">
+                    <video with="460" height="360" autoplay muted loop>
+                        <source src="ExtractionShooter/FPSGame_Clip1.mov" />
+                    </video>
+                    <div class="center-text" style="padding: 0">
+                        <h1>Concept</h1>
+
+                    </div>
+                    <div class="center-subtext" style="padding:0">
+                        <i>
+                            *FPSGame* is a first person game <br />
+                            made from a FPS controller prototype <br />
+                            made by me!
+                        </i>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="left-text-subheader" style="white-space: nowrap; text-align: left">
+                <h1>Project Details</h1>
+                <div class="side-by-side-text">
+                    <div style="padding-right: 10%;">
+                        Plattform:<br />
+                        Genre:<br />
+                        Engine:<br />
+                        Development time:<br />
+                        Team size:
+                    </div>
+                    <div>
+                        PC<br />
+                        Unreal<br />
+                        First Person Shooter <br />
+                        3 months <br />
+                        3
+                    </div>
+                </div>
+
+                <br /><br /><br />
+
+                <h2>Roles and Responsibilities</h2> <br />
+
+                <div class="side-by-side-text">
+                    <div>
+                        <h4>Everything tech</h4>
+                        Rapid Prototyping, <br />
+                        Script optimizing, <br />
+                        Bug fixing, <br />
+                        AI Scripting, <br />
+                        Implementing features
+                    </div>
+
+                    <div>
+                        <h4>Game Design</h4>
+                        3Cs Design, <br />
+                        Balancing, <br />
+                        Systems, <br />
+                        AI Design, <br />
+                        Gameplay loops
+
+                    </div>
+                </div>
+
+
+
+
+                <br /> <br /> <br />
+
+            </div>
+        </div>
+
+
+    </main>
+
+    <main2>
+
+        <div class="left-text-subheader" style="text-align: center">
+            <h2>First Person Controller Setup</h2>
+            <i>The first task was to setup my own controller that I can work with</i>
+        </div>
+
+        <div class="side-by-side" style="padding: 30px; gap: 50px">
+            <div class="card-content" style="width: 70%">
+                <div class="card-content-text" style="text-align: left; ">
+                    <h3>Camera controller</h3>
+                    <sub>
+                        I first had to script my own <b>camera component in c++</b> <br />
+                        so that I easily could handle it through code later.
+                    </sub>
+                </div>
+            </div>
+            <div class="card-content" style="width: 70%">
+                <div class="card-content-text" style="text-align: left">
+                    <h3>Movement System</h3>
+                    <sub>
+                        The movement system was made fully in blueprints <br />
+                        because I would not need to change it with code.
+                    </sub>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+
+
+        <br /> <br />
+
+        <div class="left-text-subheader" style="text-align: center">
+            <h2>The Gun</h2>
+            The gun is the biggest subject in a FPS game. It had to feel good!
+        </div>
+
+        <div class="card-content" style="width: 70%">
+            <div class="side-by-side" style="padding:0">
+                <div class="image-row">
+                    <img src="ExtractionShooter/FPSGame_GunSway.gif" width="600" height="300" />
+                </div>
+                <div class="card-content-text" style="text-align: left; ">
+                    <h3>Weapon Sway</h3>
+                    <sub>
+                        The first task was hooking up weapon sway. <br />
+                        It was difficult finding a way to <b>
+                            convert player movement <br />
+                            to weapon relative position.
+                        </b>
+                    </sub>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="card-content" style="width: 70%">
+            <div class="side-by-side" style="padding:0">
+                <div class="card-content-text" style="text-align: left; ">
+                    <h3>Gun Bob</h3>
+                    <sub>
+                        Gun bob was all about hooking up movement to a<br />
+                        <b>sine wave</b> that was hooked up <b>to the guns relative Z (up) location.</b>
+                    </sub>
+                </div>
+                <div class="image-row">
+                    <img src="ExtractionShooter/FPSGame_GunBob.gif" width="600" height="300" />
+                </div>
+
+            </div>
+
+        </div>
+
+        <br />
+
+        <div class="card-content" style="width: 70%">
+            <div class="side-by-side" style="padding:0">
+                <div class="image-row">
+                    <img src="ExtractionShooter/FPSGame_GunLean.gif" width="600" height="300" />
+                </div>
+                <div class="card-content-text" style="text-align: left; ">
+                    <h3>Leaning</h3>
+                    <sub>
+                        Due to the <b>tactical nature</b> of the game I decided to try out leaning. <br />
+                        The <b>level designer felt it was neccecary</b> for the level he was invisioning <br />
+                        so I made it work.
+                    </sub>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="card-content" style="width: 70%">
+            <div class="side-by-side" style="padding:0">
+                <div class="card-content-text" style="text-align: left; ">
+                    <h3>Recoil</h3>
+                    <sub>
+                        The recoil simple worked by constantly lerping the rotation to 0 <br />
+                        and adding a rotation when shooting.
+                    </sub>
+                </div>
+                <div class="image-row">
+                    <img src="ExtractionShooter/FPSGame_GunRecoil.gif" width="600" height="300" />
+                </div>
+
+            </div>
+
+        </div>
+
+        <br />
+
+        <div class="card-content" style="width: 70%">
+            <div class="side-by-side" style="padding:0">
+                <div class="image-row">
+                    <img src="ExtractionShooter/FPSGame_RotationProblem.gif" width="600" height="300" />
+                </div>
+                <div class="card-content-text" style="text-align: left; ">
+                    <h3>Rotation Difficulties</h3>
+                    <sub>
+                        All three features where all handling rotations on the gun. <br />
+                        I noticed quickly that <b>Unreal could not handle three different rotaion inputs.</b> <br />
+                        I solved this by <b>spliting the gun into two components</b> <br />
+                        so that I could <b>split out one of the calculations.</b>
+                    </sub>
+                </div>
+
+            </div>
+        </div>
+
+        <br />
+
+        <br />
+
+        <div class="left-text-subheader" style="text-align: center">
+            <h2>The Camera</h2>
+            <i>
+                The camera in a firt person shooter is one of the most difficult balances. <br />
+                I wanted to make it realistic and feel good but not giving my player motion sickness.
+            </i>
+        </div>
+
+        <div class="card-content">
+            <div class="side-by-side">
+                <div class="card-content-text">
+                    <h3>Recoil and Leaning</h3>
+                    <sub>
+                        The recoil and leaning on the camera worked the same way as the gun. <br />
+                        However obviusly they needed different values.
+                    </sub>
+                </div>
+
+                <div class="image-row">
+                    <img src="ExtractionShooter/FPSGame_CamRecoilLean.gif" width="600" height="300" />
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="card-content">
+            <div class="side-by-side">
+                <div class="image-row">
+                    <img src="ExtractionShooter/FPSGame_CamHeadBob.gif" width="500" height="250" />
+                </div>
+                <div class="card-content-text">
+                    <h2>Head Bob</h2>
+                    <sub>
+                        The head bob on the up axis was the same as the gun but I added a sine wave <br />
+                        on the right axis too to simulate walking better.
+                    </sub>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="left-text-subheader" style="text-align: center">
+            <h2>Next on the List</h2>
+            <i>
+                The things I have not yet implemented.
+            </i>
+        </div>
+
+        <br />
+
+        <div class="side-by-side" style="padding: 30px; gap: 50px">
+            <div class="card-content" style="width: 70%">
+                <div class="card-content-text" style="text-align: left; ">
+                    <h3>Enemy AI</h3>
+                    <sub>
+                        I will have to desgin and implement a AI that can detect the player, <br />
+                        use covers and it needs to blend animations smoothly.
+                    </sub>
+                </div>
+            </div>
+            <div class="card-content" style="width: 70%">
+                <div class="card-content-text" style="text-align: left">
+                    <h3>UI</h3>
+                    <sub>
+                        The game needs a better HUD and simple menus. This is something I<br />
+                        am passionate about.
+                    </sub>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="left-text-subheader" style="text-align: center">
+            <h2>Takeaways</h2>
+            <i>
+                What I learned, liked and disliked
+            </i>
+        </div>
+
+        <div class="card-content">
+            <div class="card-content-text" style="white-space: normal">
+                <ul>
+                    <li>First person shooters are my thing. It felt like home working on this project</li>
+                    <li>Being in charge of all tech was scary but super fun. I learnt a lot about a lot of tech!</li>
+                    <li>Working closly with a level designer made it a lot more fun for the both of us.</li>
+                </ul>
+
+
+            </div>
+        </div>
+
+        <div class="left-text-subheader" style="text-align: center">
+            <h2>Thank you for reading!</h2>
+        </div>
+
+
+        <script src="javascript.js"></script>
+
+
+    </main2>
+
+</body>
+</html>
