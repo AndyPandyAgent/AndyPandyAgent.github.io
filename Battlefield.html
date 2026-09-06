@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    <link rel="stylesheet" href="css/styleGame1.css">
+
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Projects</a>
+                <ul class="dropdown-content">
+                    <li><a href="FruityWars.html">Reberryon</a></li>
+                    <li><a href="Atomancer.html">Atomancer</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About Me</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <div class="side-by-side">
+            <div class="left-text-header">
+                <img src="Images/BF6Banner.png" width="700"/>
+            </div>
+
+            <div class="left-text-subheader" style="white-space: nowrap">
+                <h2>Roles and Responsibility</h2> <br />
+                <h4>Game Design</h4>
+                Paper Designs, <br />
+                Iterate on design, <br />
+                Implementing features, <br />
+                Bug fixing
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+    <main2>
+
+        <div class="left-text-subheader" style="text-align: center">
+            <h2>Vehicles</h2>
+            <i>
+                Some vehicles I worked on during the project. I <b>designed and implemented</b> them in the game.
+            </i>
+        </div>
+
+        <div class="card-content">
+            <div class="side-by-side">
+                <div class="card-content-text">
+                    <h3>EoD Bot</h3>
+                    <sub>
+                        Me and a colluge designed this bot to be a <b>fast moving</b> and <b>agile</b> vehicle. <br />
+                        It also had to be <b>easy to control</b> and <b>fun to play</b> with. <br />
+                    </sub>
+                </div>
+                <div class="image-row">
+                    <img src="Battlefield/eodbot.jpg" width="300" height="300" />
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+
+        <div class="card-content" style="width:auto;">
+            <div class="card-content-text" style="padding: 0; text-align: center">
+                <h2>Resupply Stations</h2>
+                <br />
+            </div>
+            <div class="card-content-text" style="padding: 0; text-align: center">
+                <i>
+                    I had to implement and design the resupply stations in the game. <br />
+                    Both for air vehicles and ground vehicles. <br />
+                </i>
+            </div>
+
+            <div class="image-row">
+                <img src="Battlefield/vehicle-supply-station.jpg" width="700" />
+            </div>
+
+        </div>
+
+        <br />
+
+        <div class="left-text-subheader" style="text-align: center">
+            <h2>Soldier</h2>
+            <i>
+                I got to prototype new movement mechanics for the soldiers in the game. <br />
+                I prototyped improvement for ladders and ziplines that never made realse. <br /> <br />
+                I also prototyped a brand new melee system never seen before but it was scrapped due to time constraints. <br />
+            </i>
+        </div>
+
+
+        <div class="left-text-subheader" style="text-align: center">
+            <h2>Thank you for reading!</h2>
+        </div>
+
+
+
+
+        <div class="displayText" id="text1" style="display: none;">
+            <pre>
+            
+            AreaDamage Script
+
+            private void Start()
+                {
+                    //_renderer = areaObject.GetComponent<Renderer>();
+                    //originalColor = _renderer.material.color;
+                    InvokeRepeating("DamageTick", 0.0f, timeBetweenAttacks);
+                    areaObject.transform.localScale = new Vector3(1, 1, 1) * radius/3;
+                    startRotation = areaObject.transform.rotation; 
+                }
+                private void Update()
+                {
+                    areaObject.transform.rotation = startRotation;
+                }
+
+                /*private void Update()
+                {
+                    // Constantly change color
+                    timer += Time.deltaTime;
+                    float lerpValue = (Mathf.Sin(timer / timeBetweenAttacks * Mathf.PI * 2) + 1) / 2; // Oscillates between 0 and 1
+                    _renderer.material.color = Color.Lerp(originalColor, flashColor, lerpValue);
+
+                    areaObject.transform.localScale = new Vector3(radius * 2, areaObject.transform.localScale.y, radius * 2);
+                }*/
+
+                private void DamageTick()
+                {
+                    Collider[] enemiesInRange = Physics.OverlapSphere(transform.position, radius, enemyMask);
+                    foreach (Collider enemyCollider in enemiesInRange)
+                    {
+                        S_EnemyHealthController emc = enemyCollider.GetComponent<S_EnemyHealthController>
+    ();
+    if (emc != null)
+    {
+    emc.TakeDamage(damage);
+    }
+    }
+    _____________________________________________________________________________________________________________________
+
+            DamgeTrail Script
+
+            private void Start()
+            {
+            isOnPlayer = gameObject.transform.root.tag == "Player";
+            maxTrailLength = Mathf.FloorToInt(trailLengthTime / spawnInterval);
+            trailBulletQueue = new Queue<GameObject>
+                ();
+                trailRenderer = GetComponent<TrailRenderer>
+                    ();
+                    trailWdith = trailRenderer.startWidth;
+
+                    trailRenderer.time = trailLengthTime;
+                    }
+
+                    private void Update()
+                    {
+                    if (!isOnPlayer)
+                    {
+                    transform.localPosition = new Vector3(0f, 0f, 3 + math.sin(Time.time * 3) * 3f);
+                    }
+
+                    spawnTimer += Time.deltaTime;
+                    damageTimer += Time.deltaTime;
+                    if (spawnTimer >= spawnInterval)
+                    {
+                    SpawntrailBullet();
+                    spawnTimer = 0;
+                    }
+
+                    if (damageTimer >= damageTickInterval)
+                    {
+                    DamageEnemies();
+                    damageTimer = 0;
+                    }
+                    }
+
+                    private void SpawntrailBullet()
+                    {
+                    Vector3 spawnPosition = transform.position;
+                    GameObject newtrailBullet;
+                    if (trailBulletQueue.Count < maxTrailLength)
+                    {
+                    newtrailBullet = Instantiate(trailColliderPrefab, spawnPosition, Quaternion.identity);
+                    newtrailBullet.transform.localScale = Vector3.one * trailWdith;
+                    }
+                    else
+                    {
+                    newtrailBullet = trailBulletQueue.Dequeue();
+                    newtrailBullet.transform.position = spawnPosition;
+                    }
+
+                    trailBulletQueue.Enqueue(newtrailBullet);
+                    }
+
+                    private void DamageEnemies()
+                    {
+                    StartCoroutine(FlashTrail());
+                    foreach (GameObject trailBullet in trailBulletQueue)
+                    {
+                    Collider[] overlappingColliders = Physics.OverlapSphere(trailBullet.transform.position, trailWdith / 2);
+                    foreach (Collider col in overlappingColliders)
+                    {
+                    S_EnemyHealthController enemy = col.gameObject.GetComponent<S_EnemyHealthController>
+                    ();
+                    if (enemy != null)
+                    {
+                    enemy.TakeDamage(damageAmount);
+                    }
+                    }
+                    }
+                    }
+
+
+                    private IEnumerator FlashTrail()
+                    {
+                    Color originalColor = trailRenderer.startColor;
+                    trailRenderer.startColor = flashColor;
+                    trailRenderer.endColor = flashColor;
+
+                    yield return new WaitForSeconds(flashDuration);
+
+                    trailRenderer.endColor = originalColor;
+                    trailRenderer.startColor = originalColor;
+                    }
+    _______________________________________________________________________________________________________________
+
+                        KillRadomOnScreenScript
+
+                        private void Awake()
+                        {
+                        CreateBoltPool(initialBoltPoolSize);
+                        }
+
+                        private void OnEnable()
+                        {
+                        Kill();
+                        elapsedTime = 0;
+                        }
+
+                        private void OnDisable()
+                        {
+                        foreach (GameObject bolt in boltPool)
+                        {
+                        if (bolt != null)
+                        bolt.SetActive(false);
+                        }
+                        }
+                        void Update()
+                        {
+                        elapsedTime += Time.deltaTime;
+
+                        if (elapsedTime >= timeBetweenKills)
+                        {
+                        elapsedTime = 0f;
+                        Kill();
+                        }
+                        }
+
+                        private void CreateBoltPool(int size)
+                        {
+                        for (int i = 0; i < size; i++)
+                        {
+                        GameObject bolt = Instantiate(boltPrefab);
+                        bolt.SetActive(false);
+                        boltPool.Add(bolt);
+                        }
+                        }
+
+                        private GameObject GetBoltFromPool()
+                        {
+                        foreach (GameObject bolt in boltPool)
+                        {
+                        if (!bolt.activeInHierarchy)
+                        {
+                        return bolt;
+                        }
+                        }
+
+                        GameObject newBolt = Instantiate(boltPrefab);
+                        boltPool.Add(newBolt);
+                        return newBolt;
+                        }
+
+                        private void Kill()
+                        {
+                        killableEnemies.Clear();
+                        foreach (Collider enemy in Physics.OverlapSphere(transform.position, killRange, enemyLayer))
+                        {
+                        // Debug.Log(enemy.name);
+                        killableEnemies.Add(enemy.gameObject);
+                        }
+
+                        if (killableEnemies.Count <= 0)
+                        return;
+                        for (int i = 0; i < numKills; i++)
+                        {
+                        KillRandomEnemy();
+                        }
+                        AudioManager.Instance.PlaySound3D("Cern-TainDeath", transform.position);
+                        }
+
+                        private void KillRandomEnemy()
+                        {
+                        GameObject tempEnemy = killableEnemies[Random.Range(0, killableEnemies.Count)];
+                        S_EnemyHealthController tempHealthController = tempEnemy.GetComponent<S_EnemyHealthController>
+                            ();
+                            tempHealthController.TakeDamage(damage);
+                            CreateBolt(tempEnemy.transform);
+                            }
+
+                            private void CreateBolt(Transform enemyTransform)
+                            {
+                            GameObject bolt = GetBoltFromPool();
+                            bolt.transform.position = enemyTransform.position;
+                            bolt.transform.rotation = Quaternion.identity;
+                            bolt.SetActive(true);
+                            StartCoroutine(DisableBoltAfterTime(bolt, boltLifetime));
+                            }
+
+                            private IEnumerator DisableBoltAfterTime(GameObject bolt, float time)
+                            {
+                            yield return new WaitForSeconds(time);
+                            bolt.SetActive(false);
+                            }
+
+
+
+
+</pre>
+
+        </div>
+        <script src="javascript.js"></script>
+
+
+    </main2>
+
+</body>
+</html>

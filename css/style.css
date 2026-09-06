@@ -123,13 +123,28 @@ nav .dropdown:hover .dropdown-content {
 
 }
 
-    .image-row img {
-        max-width: 500%;
-        border-radius: 20px;
-        border-style: solid;
-        border-color: #0C2C2E;
-        border-radius: 5px;
-    }
+.image-row img {
+    max-width: 500%;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #0C2C2E;
+    border-radius: 5px;
+}
+
+.image-solo {
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    justify-content: center; /* Center horizontally */
+}
+
+.image-solo img {
+    width: 2000px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #0C2C2E;
+    border-radius: 5px;
+}
 
 .image-with-text {
     overflow: visible;
@@ -157,6 +172,22 @@ nav .dropdown:hover .dropdown-content {
     font-size: 20px;
     position: absolute;
     top: 40%;
+    left: 30%; /* Adjust horizontal positioning */
+    transform: translate(-50%, -50%); /* Center the overlay */
+    opacity: 1;
+    text-align: center;
+    color: #dae6db;
+    transition: opacity 0.3s;
+    padding: 10px;
+    border: thick;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.text-overlay-solo {
+    font-size: 20px;
+    position: absolute;
+    top: 70%;
     left: 30%; /* Adjust horizontal positioning */
     transform: translate(-50%, -50%); /* Center the overlay */
     opacity: 1;
@@ -352,6 +383,22 @@ nav .dropdown:hover .dropdown-content {
         border-radius: 5px;
     }
 
+    .image-solo {
+        display: flex;
+        align-items: center;
+        overflow: visible;
+        justify-content: center; /* Center horizontally */
+    }
+
+    .image-solo img {
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #0C2C2E;
+        border-radius: 5px;
+    }
+
+
+
     .image-with-text {
     overflow: visible;
     position: relative;
@@ -360,11 +407,13 @@ nav .dropdown:hover .dropdown-content {
     }
 
     .image-with-text img {
-        max-width: 60%;
+        max-width: 80%;
         display: block;
         margin-bottom: 10px;
         transition: transform 0.2s;
-
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .image-with-text:hover img{
@@ -388,6 +437,22 @@ nav .dropdown:hover .dropdown-content {
     border: thick;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .text-overlay-solo {
+        font-size: 10px;
+        position: absolute;
+        top: 60%;
+        left: 30%; /* Adjust horizontal positioning */
+        transform: translate(-50%, -50%); /* Center the overlay */
+        opacity: 1;
+        text-align: center;
+        color: #dae6db;
+        transition: opacity 0.3s;
+        padding: 10px;
+        border: thick;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
     }
 
 /* Show text overlay when hovering over .image-with-text */
